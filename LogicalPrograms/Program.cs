@@ -11,7 +11,8 @@ namespace Logical_Programs
         static void Main(string[] args)
         {
             Console.WriteLine("Choose the program");
-            Console.WriteLine("\n 1. Fibonacci Series \n 2. Perfect Number \n 3. Prime Number \n 4. Reverse Number \n 5. Coupon Numbers \n 6. Day of Week  \n 7. Simulate Stop Watch \n 8. Temperature Conversion ");
+            Console.WriteLine("\n 1. Fibonacci Series \n 2. Perfect Number \n 3. Prime Number \n 4. Reverse Number \n 5. Coupon Numbers \n 6. Simulate Stop Watch" +
+                "\n 7. Notes Vending Machine \n 8. Day of Week \n 9. Temperature Conversion \n 10. Monthly Payment \n 11. Sqrt \n 12. To Binary \n 13. Swap Nibbles");
             int programNum = Convert.ToInt32(Console.ReadLine());
             switch (programNum)
             {
@@ -31,14 +32,34 @@ namespace Logical_Programs
                     CouponNumbers.CheckCouponNumbers();
                     break;
                 case 6:
-                    DayOfWeek.FindDayOfWeek();
-                    break;
-                case 7:
                     SimulateStopWatch.GetElapsedTime();
                     break;
+                case 7:
+                    NotesVendingMachine.GetNotes();
+                    break;
                 case 8:
+                    DayOfWeek.FindDayOfWeek();
+                    break;
+                case 9:
                     TemperatureConversion.ConvertTemp();
                     break;
+                case 10:
+                    MonthlyPayment.GetMonthlyPayment();
+                    break;
+                case 11:
+                    Console.WriteLine("Enter a non negative number: ");
+                    double c = Convert.ToDouble(Console.ReadLine());
+                    double answer = SquareRoot.GetSqrtOfNonNegativeNum(c);
+                    Console.WriteLine(answer);
+                    break;
+                case 12:
+                    ToBinary.ConvertToBinary();
+                    Console.ReadLine();
+                    break;
+                case 13:
+                    SwapNibblesAndResult.Swap_GetResultantNumber();
+                    break;
+                default:
                     Console.WriteLine("Please choose the correct ProgramNum");
                     break;
             }
